@@ -1,0 +1,2009 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red180\green36\blue25;\red47\green180\blue29;\red159\green160\blue28;
+\red46\green174\blue187;\red133\green0\blue2;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf0 \CocoaLigature0 Last login: Wed Sep 21 08:09:45 on console\
+dhcp-10-102-147-96:~ AparnaSingh$ pwd\
+/Users/AparnaSingh\
+dhcp-10-102-147-96:~ AparnaSingh$ ls\
+Applications			ibt_application.log\
+Desktop				ibtsa.log\
+Documents			matlab_crash_dump.15782-1\
+Downloads			matlab_crash_dump.42499-1\
+Library				matlab_crash_dump.48981-1\
+Movies				oasys.log\
+Music				oceanview\
+Pictures			pygame\
+Public				summary.txt\
+anaconda\
+dhcp-10-102-147-96:~ AparnaSingh$ git config --global user.name "Aparna Singh"\
+dhcp-10-102-147-96:~ AparnaSingh$ git config --global user.email "aparna.singh@northwestern.edu"\
+dhcp-10-102-147-96:~ AparnaSingh$ git config --global color.ui "auto"\
+dhcp-10-102-147-96:~ AparnaSingh$ git config --global core.editor "vi"\
+dhcp-10-102-147-96:~ AparnaSingh$ git config --list\
+core.excludesfile=~/.gitignore\
+core.legacyheaders=false\
+core.quotepath=false\
+core.pager=less\
+mergetool.keepbackup=true\
+push.default=simple\
+color.ui=auto\
+color.interactive=auto\
+repack.usedeltabaseoffset=true\
+alias.s=status\
+alias.a=!git add . && git status\
+alias.au=!git add -u . && git status\
+alias.aa=!git add . && git add -u . && git status\
+alias.c=commit\
+alias.cm=commit -m\
+alias.ca=commit --amend\
+alias.ac=!git add . && git commit\
+alias.acm=!git add . && git commit -m\
+alias.l=log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'\
+alias.ll=log --stat --abbrev-commit\
+alias.lg=log --color --graph --pretty=format:'%C(bold white)%h%Creset -%C(bold green)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative\
+alias.llg=log --color --graph --pretty=format:'%C(bold white)%H %d%Creset%n%s%n%+b%C(bold blue)%an <%ae>%Creset %C(bold green)%cr (%ci)' --abbrev-commit\
+alias.d=diff\
+alias.master=checkout master\
+alias.spull=svn rebase\
+alias.spush=svn dcommit\
+alias.alias=!git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\	 => \\2/' | sort\
+include.path=~/.gitcinclude\
+include.path=.githubconfig\
+include.path=.gitcredential\
+diff.exif.textconv=exif\
+credential.helper=osxkeychain\
+user.name=Aparna Singh\
+user.email=aparna.singh@northwestern.edu\
+color.ui=auto\
+core.editor=vi\
+dhcp-10-102-147-96:~ AparnaSingh$ mkdir planets\
+dhcp-10-102-147-96:~ AparnaSingh$ cd planets\
+dhcp-10-102-147-96:planets AparnaSingh$ git init\
+Initialized empty Git repository in /Users/AparnaSingh/planets/.git/\
+dhcp-10-102-147-96:planets AparnaSingh$ ls -al\
+total 0\
+drwxr-xr-x   3 AparnaSingh  staff   102 Sep 21 09:14 .\
+drwxr-xr-x+ 48 AparnaSingh  staff  1632 Sep 21 09:13 ..\
+drwxr-xr-x  10 AparnaSingh  staff   340 Sep 21 09:14 .git\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+\
+Initial commit\
+\
+nothing to commit (create/copy files and use "git add" to track)\
+dhcp-10-102-147-96:planets AparnaSingh$ vi mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ cat mars.txt\
+the two moons may be a problem for WOlfman\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+\
+Initial commit\
+\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+\
+	\cf2 mars.txt\cf0 \
+\
+nothing added to commit but untracked files present (use "git add" to track)\
+dhcp-10-102-147-96:planets AparnaSingh$ git add mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+\
+Initial commit\
+\
+Changes to be committed:\
+  (use "git rm --cached <file>..." to unstage)\
+\
+	\cf3 new file:   mars.txt\cf0 \
+\
+dhcp-10-102-147-96:planets AparnaSingh$ git commit -m "Starting notes on Mars as a base"\
+[master (root-commit) 5ac9055] Starting notes on Mars as a base\
+ 1 file changed, 1 insertion(+)\
+ create mode 100644 mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+nothing to commit, working tree clean\
+dhcp-10-102-147-96:planets AparnaSingh$ git log \
+\cf4 commit 5ac90554b200b48d3ca076cc74db76d62d0b5682\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 09:19:58 2016 -0500\
+\
+    Starting notes on Mars as a base\
+dhcp-10-102-147-96:planets AparnaSingh$ vi mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ cat mars.txt\
+Mars would be a good place for colony\
+the two moons may be a problem for Wolfman\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes not staged for commit:\
+  (use "git add <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\
+\
+	\cf2 modified:   mars.txt\cf0 \
+\
+no changes added to commit (use "git add" and/or "git commit -a")\
+dhcp-10-102-147-96:planets AparnaSingh$ git diff\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 6a8691b..964c03e 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1 +1,2 @@\cf0 \
+\cf2 -the two moons may be a problem for WOlfman\cf0 \
+\cf3 +Mars would be a good place for colony\cf0 \
+\cf3 +the two moons may be a problem for Wolfman\cf0 \
+dhcp-10-102-147-96:planets AparnaSingh$ git commit -m "Add nots about colony"\
+On branch master\
+Changes not staged for commit:\
+	\cf2 modified:   mars.txt\cf0 \
+\
+no changes added to commit\
+dhcp-10-102-147-96:planets AparnaSingh$ git add mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\
+\
+	\cf3 modified:   mars.txt\cf0 \
+\
+dhcp-10-102-147-96:planets AparnaSingh$ git commit -m "Add notes about colony"\
+[master a8328f2] Add notes about colony\
+ 1 file changed, 2 insertions(+), 1 deletion(-)\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+nothing to commit, working tree clean\
+dhcp-10-102-147-96:planets AparnaSingh$ git log\
+\cf4 commit a8328f2f479824642593ea80c07342ce2c66863a\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 09:39:59 2016 -0500\
+\
+    Add notes about colony\
+\
+\cf4 commit 5ac90554b200b48d3ca076cc74db76d62d0b5682\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 09:19:58 2016 -0500\
+\
+    Starting notes on Mars as a base\
+dhcp-10-102-147-96:planets AparnaSingh$ vi "venus.txt"\
+dhcp-10-102-147-96:planets AparnaSingh$ git add venus.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git commit -m "considering Venus"\
+[master ad4790d] considering Venus\
+ 1 file changed, 1 insertion(+)\
+ create mode 100644 venus.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+nothing to commit, working tree clean\
+dhcp-10-102-147-96:planets AparnaSingh$ vi "mars.txt"\
+dhcp-10-102-147-96:planets AparnaSingh$ cat mars.txt\
+Mars would be a good place for colony\
+the two moons may be a problem for Wolfman\
+BUt mummy will aprrecitae lack of humidity \
+dhcp-10-102-147-96:planets AparnaSingh$ git diff\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 964c03e..5d9f3f3 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1,2 +1,3 @@\cf0 \
+ Mars would be a good place for colony\
+ the two moons may be a problem for Wolfman\
+\cf3 +BUt mummy will aprrecitae lack of humidity\cf0 \cb6  \cb1 \
+dhcp-10-102-147-96:planets AparnaSingh$ git add mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\
+\
+	\cf3 modified:   mars.txt\cf0 \
+\
+dhcp-10-102-147-96:planets AparnaSingh$ git diff\
+dhcp-10-102-147-96:planets AparnaSingh$ git diff --staged\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 964c03e..5d9f3f3 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1,2 +1,3 @@\cf0 \
+ Mars would be a good place for colony\
+ the two moons may be a problem for Wolfman\
+\cf3 +BUt mummy will aprrecitae lack of humidity\cf0 \cb6  \cb1 \
+dhcp-10-102-147-96:planets AparnaSingh$ git diff HEAD\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 964c03e..5d9f3f3 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1,2 +1,3 @@\cf0 \
+ Mars would be a good place for colony\
+ the two moons may be a problem for Wolfman\
+\cf3 +BUt mummy will aprrecitae lack of humidity\cf0 \cb6  \cb1 \
+dhcp-10-102-147-96:planets AparnaSingh$ vi venus.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\
+\
+	\cf3 modified:   mars.txt\cf0 \
+\
+Changes not staged for commit:\
+  (use "git add <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\
+\
+	\cf2 modified:   venus.txt\cf0 \
+\
+dhcp-10-102-147-96:planets AparnaSingh$ git diff\
+
+\f1\b diff --git a/venus.txt b/venus.txt
+\f0\b0 \
+
+\f1\b index 8a15dd7..ed87c6d 100644
+\f0\b0 \
+
+\f1\b --- a/venus.txt
+\f0\b0 \
+
+\f1\b +++ b/venus.txt
+\f0\b0 \
+\cf5 @@ -1 +1,2 @@\cf0 \
+ Sure is swampy here\
+\cf3 +And it's getting difficult to breathe.\cf0 \
+dhcp-10-102-147-96:planets AparnaSingh$ git diff --staged\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 964c03e..5d9f3f3 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1,2 +1,3 @@\cf0 \
+ Mars would be a good place for colony\
+ the two moons may be a problem for Wolfman\
+\cf3 +BUt mummy will aprrecitae lack of humidity\cf0 \cb6  \cb1 \
+dhcp-10-102-147-96:planets AparnaSingh$ git diff HEAD\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 964c03e..5d9f3f3 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1,2 +1,3 @@\cf0 \
+ Mars would be a good place for colony\
+ the two moons may be a problem for Wolfman\
+\cf3 +BUt mummy will aprrecitae lack of humidity\cf0 \cb6  \cb1 \
+
+\f1\b diff --git a/venus.txt b/venus.txt
+\f0\b0 \
+
+\f1\b index 8a15dd7..ed87c6d 100644
+\f0\b0 \
+
+\f1\b --- a/venus.txt
+\f0\b0 \
+
+\f1\b +++ b/venus.txt
+\f0\b0 \
+\cf5 @@ -1 +1,2 @@\cf0 \
+ Sure is swampy here\
+\cf3 +And it's getting difficult to breathe.\cf0 \
+dhcp-10-102-147-96:planets AparnaSingh$ vi mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git diff --staged\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 964c03e..5d9f3f3 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1,2 +1,3 @@\cf0 \
+ Mars would be a good place for colony\
+ the two moons may be a problem for Wolfman\
+\cf3 +BUt mummy will aprrecitae lack of humidity\cf0 \cb6  \cb1 \
+dhcp-10-102-147-96:planets AparnaSingh$ add mars.txt\
+-bash: add: command not found\
+dhcp-10-102-147-96:planets AparnaSingh$ git add mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git add venus.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git commit -m "Additional notes"\
+[master 1227866] Additional notes\
+ 2 files changed, 3 insertions(+)\
+dhcp-10-102-147-96:planets AparnaSingh$ git log\
+\cf4 commit 1227866375f2e30a2b580b06ffa8c6905ff5ed88\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 10:01:54 2016 -0500\
+\
+    Additional notes\
+\
+\cf4 commit ad4790da31cf88feacefabf3e43052fb43145290\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 09:49:39 2016 -0500\
+\
+    considering Venus\
+\
+\cf4 commit a8328f2f479824642593ea80c07342ce2c66863a\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 09:39:59 2016 -0500\
+\
+    Add notes about colony\
+\
+\cf4 commit 5ac90554b200b48d3ca076cc74db76d62d0b5682\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 09:19:58 2016 -0500\
+\
+    Starting notes on Mars as a base\
+dhcp-10-102-147-96:planets AparnaSingh$ vi mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git diff HEAD\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 5856325..5d9f3f3 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1,4 +1,3 @@\cf0 \
+ Mars would be a good place for colony\
+ the two moons may be a problem for Wolfman\
+ BUt mummy will aprrecitae lack of humidity \
+\cf2 -Hola hola. \cf0 \
+dhcp-10-102-147-96:planets AparnaSingh$ git diff HEAD~1\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 964c03e..5d9f3f3 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1,2 +1,3 @@\cf0 \
+ Mars would be a good place for colony\
+ the two moons may be a problem for Wolfman\
+\cf3 +BUt mummy will aprrecitae lack of humidity\cf0 \cb6  \cb1 \
+
+\f1\b diff --git a/venus.txt b/venus.txt
+\f0\b0 \
+
+\f1\b index 8a15dd7..ed87c6d 100644
+\f0\b0 \
+
+\f1\b --- a/venus.txt
+\f0\b0 \
+
+\f1\b +++ b/venus.txt
+\f0\b0 \
+\cf5 @@ -1 +1,2 @@\cf0 \
+ Sure is swampy here\
+\cf3 +And it's getting difficult to breathe.\cf0 \
+dhcp-10-102-147-96:planets AparnaSingh$ git log --stat\
+\cf4 commit 1227866375f2e30a2b580b06ffa8c6905ff5ed88\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 10:01:54 2016 -0500\
+\
+    Additional notes\
+\
+ mars.txt  | 2 \cf3 ++\cf0 \
+ venus.txt | 1 \cf3 +\cf0 \
+ 2 files changed, 3 insertions(+)\
+\
+\cf4 commit ad4790da31cf88feacefabf3e43052fb43145290\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 09:49:39 2016 -0500\
+\
+    considering \cf1 \cb0 Venus\cf0 \cb1 \
+\
+ venus.txt | 1 \cf3 +\cf0 \
+ 1 file changed, 1 insertion(+)\
+\
+\cf4 commit a8328f2f479824642593ea80c07342ce2c66863a\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 09:39:59 2016 -0500\
+\
+    Add notes about colony\
+\
+ mars.txt | 3 \cf3 ++\cf2 -\cf0 \
+ 1 file changed, 2 insertions(+), 1 deletion(-)\
+\
+\cf4 commit 5ac90554b200b48d3ca076cc74db76d62d0b5682\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 09:19:58 2016 -0500\
+\
+    Starting notes on Mars as a base\
+\
+ mars.txt | 1 \cf3 +\cf0 \
+ 1 file changed, 1 insertion(+)\
+
+\f1\b ~
+\f0\b0 \
+ ESCOC\
+\
+\
+\
+\
+\
+\cf4 a\cf0 \
+n.edu>\
+\
+\
+\
+\
+\
+)\
+\
+\cf4 2\cf0 \
+n.edu>\
+\
+\
+\
+\
+\
+\
+
+\f1\b ~
+\f0\b0 \
+ ESCOC\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+\f1\b ~
+\f0\b0 \
+ ESCOC\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+\f1\b ~
+\f0\b0 \
+ ESCOC\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+\f1\b ~
+\f0\b0 \
+ ESCOC\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+\f1\b ~
+\f0\b0 \
+ ESCOC\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+\f1\b ~
+\f0\b0 \
+ ESCOD\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+\f1\b ~
+\f0\b0 \
+ ESCOD\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+\f1\b ~
+\f0\b0 \
+ ESCOD\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+\f1\b ~
+\f0\b0 \
+ ESCOD\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+
+\f1\b ~
+\f0\b0 \
+ ESCOD\
+\
+\
+\
+\
+\
+\
+\cf4 a\cf0 \
+n.edu>\
+\
+\
+\
+\
+\
+)\
+\
+\cf4 2\cf0 \
+n.edu>\
+\
+\
+\
+\
+\
+\
+ ESCOD\
+\
+    considering \cf1 \cb0 Venus\cf0 \cb1 \
+\
+ venus.txt | 1 \cf3 +\cf0 \
+ 1 file changed, 1 insertion(+)\
+\
+\cf4 commit a8328f2f479824642593ea80c07342ce2c66863a\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 09:39:59 2016 -0500\
+\
+    Add notes about colony\
+\
+ mars.txt | 3 \cf3 ++\cf2 -\cf0 \
+ 1 file changed, 2 insertions(+), 1 deletion(-)\
+\
+\cf4 commit 5ac90554b200b48d3ca076cc74db76d62d0b5682\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 09:19:58 2016 -0500\
+\
+    Starting notes on Mars as a base\
+\
+ mars.txt | 1 \cf3 +\cf0 \
+ 1 file changed, 1 insertion(+)\
+ ESCOD\
+\
+    considering \cf1 \cb0 Venus\cf0 \cb1 \
+\
+ venus.txt | 1 \cf3 +\cf0 \
+ 1 file changed, 1 insertion(+)\
+\
+\cf4 commit a8328f2f479824642593ea80c07342ce2c66863a\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 09:39:59 2016 -0500\
+\
+    Add notes about colony\
+\
+ mars.txt | 3 \cf3 ++\cf2 -\cf0 \
+ 1 file changed, 2 insertions(+), 1 deletion(-)\
+\
+\cf4 commit 5ac90554b200b48d3ca076cc74db76d62d0b5682\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 09:19:58 2016 -0500\
+\
+    Starting notes on Mars as a base\
+\
+ mars.txt | 1 \cf3 +\cf0 \
+ 1 file changed, 1 insertion(+)\
+dhcp-10-102-147-96:planets AparnaSingh$ cat mars.txt\
+Mars would be a good place for colony\
+the two moons may be a problem for Wolfman\
+BUt mummy will aprrecitae lack of humidity \
+dhcp-10-102-147-96:planets AparnaSingh$ git diff HEAD~1\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 964c03e..5d9f3f3 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1,2 +1,3 @@\cf0 \
+ Mars would be a good place for colony\
+ the two moons may be a problem for Wolfman\
+\cf3 +BUt mummy will aprrecitae lack of humidity\cf0 \cb6  \cb1 \
+
+\f1\b diff --git a/venus.txt b/venus.txt
+\f0\b0 \
+
+\f1\b index 8a15dd7..ed87c6d 100644
+\f0\b0 \
+
+\f1\b --- a/venus.txt
+\f0\b0 \
+
+\f1\b +++ b/venus.txt
+\f0\b0 \
+\cf5 @@ -1 +1,2 @@\cf0 \
+ Sure is swampy here\
+\cf3 +And it's getting difficult to breathe.\cf0 \
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes not staged for commit:\
+  (use "git add <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\
+\
+	\cf2 modified:   mars.txt\cf0 \
+\
+no changes added to commit (use "git add" and/or "git commit -a")\
+dhcp-10-102-147-96:planets AparnaSingh$ git diff HEAD~1\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 964c03e..5d9f3f3 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1,2 +1,3 @@\cf0 \
+ Mars would be a good place for colony\
+ the two moons may be a problem for Wolfman\
+\cf3 +BUt mummy will aprrecitae lack of humidity\cf0 \cb6  \cb1 \
+
+\f1\b diff --git a/venus.txt b/venus.txt
+\f0\b0 \
+
+\f1\b index 8a15dd7..ed87c6d 100644
+\f0\b0 \
+
+\f1\b --- a/venus.txt
+\f0\b0 \
+
+\f1\b +++ b/venus.txt
+\f0\b0 \
+\cf5 @@ -1 +1,2 @@\cf0 \
+ Sure is swampy here\
+\cf3 +And it's getting difficult to breathe.\cf0 \
+dhcp-10-102-147-96:planets AparnaSingh$ git log --oneline\
+\cf4 1227866\cf0  Additional notes\
+\cf4 ad4790d\cf0  considering Venus\
+\cf4 a8328f2\cf0  Add notes about colony\
+\cf4 5ac9055\cf0  Starting notes on Mars as a base\
+dhcp-10-102-147-96:planets AparnaSingh$ git diff ad4790d\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 964c03e..5d9f3f3 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1,2 +1,3 @@\cf0 \
+ Mars would be a good place for colony\
+ the two moons may be a problem for Wolfman\
+\cf3 +BUt mummy will aprrecitae lack of humidity\cf0 \cb6  \cb1 \
+
+\f1\b diff --git a/venus.txt b/venus.txt
+\f0\b0 \
+
+\f1\b index 8a15dd7..ed87c6d 100644
+\f0\b0 \
+
+\f1\b --- a/venus.txt
+\f0\b0 \
+
+\f1\b +++ b/venus.txt
+\f0\b0 \
+\cf5 @@ -1 +1,2 @@\cf0 \
+ Sure is swampy here\
+\cf3 +And it's getting difficult to breathe.\cf0 \
+dhcp-10-102-147-96:planets AparnaSingh$ git add mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\
+\
+	\cf3 modified:   mars.txt\cf0 \
+\
+dhcp-10-102-147-96:planets AparnaSingh$ git commit -m"Removed error comment"\
+[master 69ae148] Removed error comment\
+ 1 file changed, 1 deletion(-)\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+nothing to commit, working tree clean\
+dhcp-10-102-147-96:planets AparnaSingh$ vi mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ cat mars.txt\
+We will need to manufacture our own oxygen. \
+dhcp-10-102-147-96:planets AparnaSingh$ git diff\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 5d9f3f3..1902640 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1,3 +1 @@\cf0 \
+\cf2 -Mars would be a good place for colony\cf0 \
+\cf2 -the two moons may be a problem for Wolfman\cf0 \
+\cf2 -BUt mummy will aprrecitae lack of humidity \cf0 \
+\cf3 +We will need to manufacture our own oxygen.\cf0 \cb6  \cb1 \
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes not staged for commit:\
+  (use "git add <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\
+\
+	\cf2 modified:   mars.txt\cf0 \
+\
+no changes added to commit (use "git add" and/or "git commit -a")\
+dhcp-10-102-147-96:planets AparnaSingh$ git checkout HEAD mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ cat mars.txt\
+Mars would be a good place for colony\
+the two moons may be a problem for Wolfman\
+BUt mummy will aprrecitae lack of humidity \
+dhcp-10-102-147-96:planets AparnaSingh$ git log --oneline\
+\cf4 69ae148\cf0  Removed error comment\
+\cf4 1227866\cf0  Additional notes\
+\cf4 ad4790d\cf0  considering Venus\
+\cf4 a8328f2\cf0  Add notes about colony\
+\cf4 5ac9055\cf0  Starting notes on Mars as a base\
+dhcp-10-102-147-96:planets AparnaSingh$ cat mars.txt\
+Mars would be a good place for colony\
+the two moons may be a problem for Wolfman\
+BUt mummy will aprrecitae lack of humidity \
+dhcp-10-102-147-96:planets AparnaSingh$ git revert HEAD\
+[master 3801967] Revert "Removed error comment"\
+ 1 file changed, 1 insertion(+)\
+dhcp-10-102-147-96:planets AparnaSingh$ git log --oneline\
+\cf4 3801967\cf0  Revert "Removed error comment"\
+\cf4 69ae148\cf0  Removed error comment\
+\cf4 1227866\cf0  Additional notes\
+\cf4 ad4790d\cf0  considering Venus\
+\cf4 a8328f2\cf0  Add notes about colony\
+\cf4 5ac9055\cf0  Starting notes on Mars as a base\
+dhcp-10-102-147-96:planets AparnaSingh$ cat mars.txt\
+Mars would be a good place for colony\
+the two moons may be a problem for Wolfman\
+BUt mummy will aprrecitae lack of humidity \
+Hola hola. \
+dhcp-10-102-147-96:planets AparnaSingh$ git show 1227866 mars.txt\
+\cf4 commit 1227866375f2e30a2b580b06ffa8c6905ff5ed88\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 10:01:54 2016 -0500\
+\
+    Additional notes\
+\
+
+\f1\b diff --git a/mars.txt b/mars.txt
+\f0\b0 \
+
+\f1\b index 964c03e..5856325 100644
+\f0\b0 \
+
+\f1\b --- a/mars.txt
+\f0\b0 \
+
+\f1\b +++ b/mars.txt
+\f0\b0 \
+\cf5 @@ -1,2 +1,4 @@\cf0 \
+ Mars would be a good place for colony\
+ the two moons may be a problem for Wolfman\
+\cf3 +BUt mummy will aprrecitae lack of humidity\cf0 \cb6  \cb1 \
+\cf3 +Hola hola.\cf0 \cb6  \cb1 \
+dhcp-10-102-147-96:planets AparnaSingh$ cat mars.txt\
+Mars would be a good place for colony\
+the two moons may be a problem for Wolfman\
+BUt mummy will aprrecitae lack of humidity \
+Hola hola. \
+dhcp-10-102-147-96:planets AparnaSingh$ cat venus.txt\
+Sure is swampy here\
+And it's getting difficult to breathe.\
+dhcp-10-102-147-96:planets AparnaSingh$ git checkout master\
+Already on 'master'\
+dhcp-10-102-147-96:planets AparnaSingh$ vi mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes not staged for commit:\
+  (use "git add <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\
+\
+	\cf2 modified:   mars.txt\cf0 \
+\
+no changes added to commit (use "git add" and/or "git commit -a")\
+dhcp-10-102-147-96:planets AparnaSingh$ rm mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ cat mars.txt\
+cat: mars.txt: No such file or directory\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes not staged for commit:\
+  (use "git add/rm <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\
+\
+	\cf2 deleted:    mars.txt\cf0 \
+\
+no changes added to commit (use "git add" and/or "git commit -a")\
+dhcp-10-102-147-96:planets AparnaSingh$ git checkout HEAD mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ cat mars.txt\
+Mars would be a good place for colony\
+the two moons may be a problem for Wolfman\
+BUt mummy will aprrecitae lack of humidity \
+Hola hola. \
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+nothing to commit, working tree clean\
+dhcp-10-102-147-96:planets AparnaSingh$ ls\
+mars.txt	venus.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ mkdir results\
+dhcp-10-102-147-96:planets AparnaSingh$ ls\
+mars.txt	results		venus.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ ls -F\
+mars.txt	results/	venus.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ touch a.dat b.dat c.dat results/ad.out results/b.out \
+dhcp-10-102-147-96:planets AparnaSingh$ ls -F\
+a.dat		c.dat		results/\
+b.dat		mars.txt	venus.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+\
+	\cf2 a.dat\cf0 \
+	\cf2 b.dat\cf0 \
+	\cf2 c.dat\cf0 \
+	\cf2 results/\cf0 \
+\
+nothing added to commit but untracked files present (use "git add" to track)\
+dhcp-10-102-147-96:planets AparnaSingh$ vi .gitignore\
+dhcp-10-102-147-96:planets AparnaSingh$ cat .gitignore\
+# ignoring files\
+*.dat\
+results/\
+dhcp-10-102-147-96:planets AparnaSingh$ gitstatus\
+-bash: gitstatus: command not found\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+\
+	\cf2 .gitignore\cf0 \
+\
+nothing added to commit but untracked files present (use "git add" to track)\
+dhcp-10-102-147-96:planets AparnaSingh$ ls\
+a.dat		c.dat		results\
+b.dat		mars.txt	venus.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git add .gitignore\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\
+\
+	\cf3 new file:   .gitignore\cf0 \
+\
+dhcp-10-102-147-96:planets AparnaSingh$ git commit -m "Added gitignore"\
+[master 8e04720] Added gitignore\
+ 1 file changed, 3 insertions(+)\
+ create mode 100644 .gitignore\
+dhcp-10-102-147-96:planets AparnaSingh$ git status]\
+git: 'status]' is not a git command. See 'git --help'.\
+\
+Did you mean this?\
+	status\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+nothing to commit, working tree clean\
+dhcp-10-102-147-96:planets AparnaSingh$ ls\
+a.dat		c.dat		results\
+b.dat		mars.txt	venus.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git add a.dat\
+The following paths are ignored by one of your .gitignore files:\
+a.dat\
+Use -f if you really want to add them.\
+dhcp-10-102-147-96:planets AparnaSingh$ -f a.dat\
+-bash: -f: command not found\
+dhcp-10-102-147-96:planets AparnaSingh$ vi .gitignore\
+dhcp-10-102-147-96:planets AparnaSingh$ cat .gitignore\
+*.dat\
+results/\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes not staged for commit:\
+  (use "git add <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\
+\
+	\cf2 modified:   .gitignore\cf0 \
+\
+no changes added to commit (use "git add" and/or "git commit -a")\
+dhcp-10-102-147-96:planets AparnaSingh$ git add .gitignore\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\
+\
+	\cf3 modified:   .gitignore\cf0 \
+\
+dhcp-10-102-147-96:planets AparnaSingh$ git ls-files\
+.gitignore\
+mars.txt\
+venus.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git remote add origin https://github.com/aparnasingh92/planets.git\
+dhcp-10-102-147-96:planets AparnaSingh$ git config -l\
+core.excludesfile=~/.gitignore\
+core.legacyheaders=false\
+core.quotepath=false\
+core.pager=less\
+mergetool.keepbackup=true\
+push.default=simple\
+color.ui=auto\
+color.interactive=auto\
+repack.usedeltabaseoffset=true\
+alias.s=status\
+alias.a=!git add . && git status\
+alias.au=!git add -u . && git status\
+alias.aa=!git add . && git add -u . && git status\
+alias.c=commit\
+alias.cm=commit -m\
+alias.ca=commit --amend\
+alias.ac=!git add . && git commit\
+alias.acm=!git add . && git commit -m\
+alias.l=log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'\
+alias.ll=log --stat --abbrev-commit\
+alias.lg=log --color --graph --pretty=format:'%C(bold white)%h%Creset -%C(bold green)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative\
+alias.llg=log --color --graph --pretty=format:'%C(bold white)%H %d%Creset%n%s%n%+b%C(bold blue)%an <%ae>%Creset %C(bold green)%cr (%ci)' --abbrev-commit\
+alias.d=diff\
+alias.master=checkout master\
+alias.spull=svn rebase\
+alias.spush=svn dcommit\
+alias.alias=!git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\	 => \\2/' | sort\
+include.path=~/.gitcinclude\
+include.path=.githubconfig\
+include.path=.gitcredential\
+diff.exif.textconv=exif\
+credential.helper=osxkeychain\
+user.name=Aparna Singh\
+user.email=aparna.singh@northwestern.edu\
+color.ui=auto\
+core.editor=vi\
+core.repositoryformatversion=0\
+core.filemode=true\
+core.bare=false\
+core.logallrefupdates=true\
+core.ignorecase=true\
+core.precomposeunicode=true\
+remote.origin.url=https://github.com/aparnasingh92/planets.git\
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\
+\
+	\cf3 modified:   .gitignore\cf0 \
+\
+dhcp-10-102-147-96:planets AparnaSingh$ git commit .gitignore\
+Aborting commit due to empty commit message.\
+dhcp-10-102-147-96:planets AparnaSingh$ git commit .gitignore\
+[master eb5d63c] deleted stuf Please enter the commit message for your changes. Lines starting\
+ 1 file changed, 1 deletion(-)\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+nothing to commit, working tree clean\
+dhcp-10-102-147-96:planets AparnaSingh$ git push origin master\
+Username for 'https://github.com': aparnasingh92\
+Password for 'https://aparnasingh92@github.com': \
+Counting objects: 23, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (17/17), done.\
+Writing objects: 100% (23/23), 2.20 KiB | 0 bytes/s, done.\
+Total 23 (delta 3), reused 0 (delta 0)\
+remote: Resolving deltas: 100% (3/3), done.\
+To https://github.com/aparnasingh92/planets.git\
+ * [new branch]      master -> master\
+dhcp-10-102-147-96:planets AparnaSingh$ git push --help\
+dhcp-10-102-147-96:planets AparnaSingh$ cd\
+dhcp-10-102-147-96:~ AparnaSingh$ cd Desktop\
+dhcp-10-102-147-96:Desktop AparnaSingh$ git clone https://github.com/jonizc/planets.git buddy_planets\
+Cloning into 'buddy_planets'...\
+remote: Counting objects: 20, done.\
+remote: Compressing objects: 100% (11/11), done.\
+remote: Total 20 (delta 4), reused 20 (delta 4), pack-reused 0\
+Unpacking objects: 100% (20/20), done.\
+dhcp-10-102-147-96:Desktop AparnaSingh$ ls\
+Aparna.Singh_resume_.docx\
+AparnaSingh_resume.pdf\
+Medical Record Release Form -4.pdf\
+Module 5 - Pig-2.docx\
+NU pres 1.pptx\
+Resume_AmarendraSingh.docx\
+Resume_AmarendraSingh.pdf\
+Screen Shot 2016-09-18 at 9.46.43 PM.png\
+bioformats_package.jar\
+buddy_planets\
+cursorpos.csv\
+cursorpos.xls\
+data\
+everything\
+for c++\
+mydata.xls\
+python-novice-inflammation\
+temp.py\
+~$E 522 homework 4.docx\
+~$ESTIONS FOR EXAM 1.docx\
+~$FInal (Autosaved).xlsx\
+~$FInal .xlsx\
+~$Final_final.xlsx\
+~$ad school interview questions.docx\
+~$arna.Singh_resume_.docx\
+~$ficial transcript.doc\
+dhcp-10-102-147-96:Desktop AparnaSingh$ cd buddy_planets\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ ls\
+mars.txt	venus.txt\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ ls -a\
+.		..		.git		mars.txt	venus.txt\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ ls -l\
+total 16\
+-rw-r--r--  1 AparnaSingh  staff  150 Sep 21 11:35 mars.txt\
+-rw-r--r--  1 AparnaSingh  staff   50 Sep 21 11:35 venus.txt\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ vi pluto.txt\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ cat pluto.txt\
+Some notes on a new file\
+pluto was good\
+and it's deomoliation was meh \
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ git status\
+On branch master\
+Your branch is up-to-date with 'origin/master'.\
+Untracked files:\
+  (use "git add <file>..." to include in what will be committed)\
+\
+	\cf2 pluto.txt\cf0 \
+\
+nothing added to commit but untracked files present (use "git add" to track)\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ git add pluto.txt\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ git commit -m "adding a new planet"\
+[master 3a2642b] adding a new planet\
+ 1 file changed, 3 insertions(+)\
+ create mode 100644 pluto.txt\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ git push origin master \
+Counting objects: 3, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (3/3), done.\
+Writing objects: 100% (3/3), 373 bytes | 0 bytes/s, done.\
+Total 3 (delta 0), reused 0 (delta 0)\
+To https://github.com/jonizc/planets.git\
+   b94d92f..3a2642b  master -> master\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ cd\
+dhcp-10-102-147-96:~ AparnaSingh$ ls\
+Applications			ibt_application.log\
+Desktop				ibtsa.log\
+Documents			matlab_crash_dump.15782-1\
+Downloads			matlab_crash_dump.42499-1\
+Library				matlab_crash_dump.48981-1\
+Movies				oasys.log\
+Music				oceanview\
+Pictures			planets\
+Public				pygame\
+anaconda			summary.txt\
+dhcp-10-102-147-96:~ AparnaSingh$ cd planets\
+dhcp-10-102-147-96:planets AparnaSingh$ ls\
+a.dat		c.dat		results\
+b.dat		mars.txt	venus.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git pull origin\
+remote: Counting objects: 3, done.\
+remote: Compressing objects: 100% (3/3), done.\
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0\
+Unpacking objects: 100% (3/3), done.\
+From https://github.com/aparnasingh92/planets\
+   eb5d63c..85827c9  master     -> origin/master\
+You asked to pull from the remote 'origin', but did not specify\
+a branch. Because this is not the default configured remote\
+for your current branch, you must specify a branch on the command line.\
+dhcp-10-102-147-96:planets AparnaSingh$ git pull origin master\
+From https://github.com/aparnasingh92/planets\
+ * branch            master     -> FETCH_HEAD\
+Updating eb5d63c..85827c9\
+Fast-forward\
+ pluto.txt | 2 \cf3 ++\cf0 \
+ 1 file changed, 2 insertions(+)\
+ create mode 100644 pluto.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+nothing to commit, working tree clean\
+dhcp-10-102-147-96:planets AparnaSingh$ git log\
+\cf4 commit 85827c9e31c4434f0c01f12e215ade7fda559caa\cf0 \
+Author: Jonathan Cedernaes <jonathan.cedernaes@northwestern.edu>\
+Date:   Wed Sep 21 11:42:32 2016 -0500\
+\
+    added file pluto.txt and some info in it / Jonizc\
+\
+\cf4 commit eb5d63c5571b60bdc88fbfe80f25da17be9c4d7e\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 11:14:40 2016 -0500\
+\
+    deleted stuf\
+    Please enter the commit message for your changes. Lines starting\
+\
+\cf4 commit 8e04720407ca7e29bdd5aa91ef5bc5f4e4e77485\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 10:55:07 2016 -0500\
+\
+    Added gitignore\
+\
+\cf4 commit 38019672107732b04745dc2d4a020763215cc3a0\cf0 \
+Author: Aparna Singh <aparna.singh@northwestern.edu>\
+Date:   Wed Sep 21 10:18:52 2016 -0500\
+\
+dhcp-10-102-147-96:planets AparnaSingh$ git diff HEAD HEAD~1\
+
+\f1\b diff --git a/pluto.txt b/pluto.txt
+\f0\b0 \
+
+\f1\b deleted file mode 100644
+\f0\b0 \
+
+\f1\b index e42ca68..0000000
+\f0\b0 \
+
+\f1\b --- a/pluto.txt
+\f0\b0 \
+
+\f1\b +++ /dev/null
+\f0\b0 \
+\cf5 @@ -1,2 +0,0 @@\cf0 \
+\cf2 -Some line here\cf0 \
+\cf2 -Pluto is the most awesome planet -- too bad it's not officially a solar planet anymore...\cf0 \
+dhcp-10-102-147-96:planets AparnaSingh$ git diff HEAD~1 HEAD\
+
+\f1\b diff --git a/pluto.txt b/pluto.txt
+\f0\b0 \
+
+\f1\b new file mode 100644
+\f0\b0 \
+
+\f1\b index 0000000..e42ca68
+\f0\b0 \
+
+\f1\b --- /dev/null
+\f0\b0 \
+
+\f1\b +++ b/pluto.txt
+\f0\b0 \
+\cf5 @@ -0,0 +1,2 @@\cf0 \
+\cf3 +Some line here\cf0 \
+\cf3 +Pluto is the most awesome planet -- too bad it's not officially a solar planet anymore...\cf0 \
+dhcp-10-102-147-96:planets AparnaSingh$ vi mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ cat mars.txt\
+Mars would be a good place for colony\
+the two moons may be a problem for Wolfman\
+BUt mummy will aprrecitae lack of humidity \
+Aparna edits here. \
+dhcp-10-102-147-96:planets AparnaSingh$ git status\
+On branch master\
+Changes not staged for commit:\
+  (use "git add <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\
+\
+	\cf2 modified:   mars.txt\cf0 \
+\
+no changes added to commit (use "git add" and/or "git commit -a")\
+dhcp-10-102-147-96:planets AparnaSingh$ git add mars.txt\
+dhcp-10-102-147-96:planets AparnaSingh$ git commit -m "Aparna edits here"\
+[master bb38f2e] Aparna edits here\
+ 1 file changed, 1 insertion(+), 1 deletion(-)\
+dhcp-10-102-147-96:planets AparnaSingh$ git push origin master\
+Counting objects: 3, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (3/3), done.\
+Writing objects: 100% (3/3), 313 bytes | 0 bytes/s, done.\
+Total 3 (delta 2), reused 0 (delta 0)\
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.\
+To https://github.com/aparnasingh92/planets.git\
+   85827c9..bb38f2e  master -> master\
+dhcp-10-102-147-96:planets AparnaSingh$ cd\
+dhcp-10-102-147-96:~ AparnaSingh$ cd Deskptop\
+-bash: cd: Deskptop: No such file or directory\
+dhcp-10-102-147-96:~ AparnaSingh$ cd Desktop\
+dhcp-10-102-147-96:Desktop AparnaSingh$ ls\
+Aparna.Singh_resume_.docx\
+AparnaSingh_resume.pdf\
+Medical Record Release Form -4.pdf\
+Module 5 - Pig-2.docx\
+NU pres 1.pptx\
+Resume_AmarendraSingh.docx\
+Resume_AmarendraSingh.pdf\
+Screen Shot 2016-09-18 at 9.46.43 PM.png\
+bioformats_package.jar\
+buddy_planets\
+cursorpos.csv\
+cursorpos.xls\
+data\
+everything\
+for c++\
+mydata.xls\
+python-novice-inflammation\
+temp.py\
+~$E 522 homework 4.docx\
+~$ESTIONS FOR EXAM 1.docx\
+~$FInal (Autosaved).xlsx\
+~$FInal .xlsx\
+~$Final_final.xlsx\
+~$ad school interview questions.docx\
+~$arna.Singh_resume_.docx\
+~$ficial transcript.doc\
+dhcp-10-102-147-96:Desktop AparnaSingh$ cd buddy_planets\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ vi mars.txt\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ git add mars.txt\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ git commit -m "Aparna made some editing to it"\
+[master 7dac21f] Aparna made some editing to it\
+ 1 file changed, 1 insertion(+), 1 deletion(-)\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ git pull origin master\
+remote: Counting objects: 8, done.\
+remote: Compressing objects: 100% (4/4), done.\
+remote: Total 8 (delta 3), reused 8 (delta 3), pack-reused 0\
+Unpacking objects: 100% (8/8), done.\
+From https://github.com/jonizc/planets\
+ * branch            master     -> FETCH_HEAD\
+   3a2642b..bd8b620  master     -> origin/master\
+Auto-merging mars.txt\
+CONFLICT (content): Merge conflict in mars.txt\
+Automatic merge failed; fix conflicts and then commit the result.\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ vi mars.txt\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ git status\
+On branch master\
+Your branch and 'origin/master' have diverged,\
+and have 1 and 3 different commits each, respectively.\
+  (use "git pull" to merge the remote branch into yours)\
+You have unmerged paths.\
+  (fix conflicts and run "git commit")\
+  (use "git merge --abort" to abort the merge)\
+\
+Changes to be committed:\
+\
+	\cf3 new file:   yu.txt\cf0 \
+\
+Unmerged paths:\
+  (use "git add <file>..." to mark resolution)\
+\
+	\cf2 both modified:   mars.txt\cf0 \
+\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ git add mars.txt\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ git commit -m "now it should work"\
+[master 126b93d] now it should work\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ git push orgin master\
+fatal: 'orgin' does not appear to be a git repository\
+fatal: Could not read from remote repository.\
+\
+Please make sure you have the correct access rights\
+and the repository exists.\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ git push origin master\
+Counting objects: 6, done.\
+Delta compression using up to 4 threads.\
+Compressing objects: 100% (6/6), done.\
+Writing objects: 100% (6/6), 731 bytes | 0 bytes/s, done.\
+Total 6 (delta 2), reused 0 (delta 0)\
+remote: Resolving deltas: 100% (2/2), completed with 1 local objects.\
+To https://github.com/jonizc/planets.git\
+   bd8b620..126b93d  master -> master\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ history\
+  170          " jne              2b;                       "\
+  171          " add              %7,         %0;           " /* srcpix += srcdiff */\
+  172          " add              %8,         %1;           " /* dstpix += dstdiff */\
+  173          " decl             %3;                       "\
+  174          " jne              1b;                       "\
+  175          " emms;                                      "\
+  176          : "+r"(srcpix), "+r"(dstpix)  /* outputs */\
+  177          : "m"(One64),   "m"(height), "m"(srcwidth),\
+  178            "m"(xspace),  "m"(xrecip), "m"(srcdiff64), "m"(dstdiff64)     /* inputs */\
+  179          : "%ecx","%edx"               /* clobbered */\
+  180          );\
+  181  \}\
+  182  /* These functions implement an area-averaging shrinking filter in the Y-dimension.\
+  183   */\
+  184  void\
+  185  filter_shrink_Y_MMX(Uint8 *srcpix, Uint8 *dstpix, int width, int srcpitch, int dstpitch, int srcheight, int dstheight)\
+  186  \{     Uint16 *templine;     int srcdiff = srcpitch - (width * 4);\
+  187      int dstdiff = dstpitch - (width * 4);\
+  188      int yspace = 0x4000 * srcheight / dstheight; /* must be > 1 */\
+  189      int yrecip = 0x40000000 / yspace;\
+  190      long long One64 = 0x4000400040004000ULL;\
+  191      /* allocate and clear a memory area for storing the accumulator line */\
+  192      templine = (Uint16 *) malloc(dstpitch * 2);\
+  193      if (templine == 0) return;\
+  194      memset(templine, 0, dstpitch * 2);\
+  195      long long srcdiff64 = srcdiff;\
+  196      long long dstdiff64 = dstdiff;\
+  197      asm __volatile__(" /* MMX code for Y-shrink area average filter */ "\
+  198          " movl             %5,      %%ecx;           " /* ecx == ycounter */\
+  199          " pxor          %%mm0,      %%mm0;           "\
+  200          " movd             %6,      %%mm7;           " /* mm7 == yrecipmmx */\
+  201          " punpcklwd     %%mm7,      %%mm7;           "\
+  202          " punpckldq     %%mm7,      %%mm7;           "\
+  203          "1:                                          " /* outer Y-loop */\
+  204          " mov              %2,      %%rax;           " /* rax == accumulate */\
+  205          " cmpl        $0x4000,      %%ecx;           "\
+  206          " jbe              3f;                       "\
+  207          " movl             %4,      %%edx;           " /* edx == width */\
+  208          "2:                                          "\
+  209          " movd           (%0),      %%mm1;           "\
+  210          " add              $4,         %0;           "\
+  211          " movq        (%%rax),      %%mm2;           "\
+  212          " punpcklbw     %%mm0,      %%mm1;           "\
+  213          " paddw         %%mm1,      %%mm2;           "\
+  214          " movq          %%mm2,    (%%rax);           "\
+  215          " add              $8,      %%rax;           "\
+  216          " decl          %%edx;                       "\
+  217          " jne              2b;                       "\
+  218          " subl        $0x4000,      %%ecx;           "\
+  219          " jmp              6f;                       "\
+  220          "3:                                          " /* prepare to output a line */\
+  221          " movd          %%ecx,      %%mm1;           "\
+  222          " movl             %4,      %%edx;           " /* edx = width */\
+  223          " movq             %9,      %%mm6;           " /* mm6 = 2^14  */\
+  224          " punpcklwd     %%mm1,      %%mm1;           "\
+  225          " punpckldq     %%mm1,      %%mm1;           "\
+  226          " psubw         %%mm1,      %%mm6;           " /* mm6 = yfrac */\
+  227          "4:                                          "\
+  228          " movd           (%0),      %%mm4;           " /* mm4 = srcpix */\
+  229          " add              $4,         %0;           "\
+  230          " punpcklbw     %%mm0,      %%mm4;           "\
+  231          " movq        (%%rax),      %%mm5;           " /* mm5 = accumulate */\
+  232          " movq          %%mm6,      %%mm3;           "\
+  233          " psllw            $2,      %%mm4;           "\
+  234          " movq          %%mm4,      %%mm0;           " /* mm3 = (srcpix * yfrac) >> 16) */\
+  235          " psraw           $15,      %%mm0;           "\
+  236          " pand          %%mm3,      %%mm0;           "\
+  237          " movq          %%mm3,      %%mm2;           "\
+  238          " psraw           $15,      %%mm2;           "\
+  239          " pand          %%mm4,      %%mm2;           "\
+  240          " pmulhw        %%mm4,      %%mm3;           "\
+  241          " paddw         %%mm0,      %%mm3;           "\
+  242          " paddw         %%mm2,      %%mm3;           "\
+  243          " movq          %%mm1,      %%mm0;           " /* mm4 = (srcpix * ycounter >> 16) */\
+  244          " psraw           $15,      %%mm0;           "\
+  245          " pand          %%mm4,      %%mm0;           "\
+  246          " movq          %%mm4,      %%mm2;           "\
+  247          " psraw           $15,      %%mm2;           "\
+  248          " pand          %%mm1,      %%mm2;           "\
+  249          " pmulhw        %%mm1,      %%mm4;           "\
+  250          " paddw         %%mm0,      %%mm4;           "\
+  251          " paddw         %%mm2,      %%mm4;           "\
+  252          " movq          %%mm3,    (%%rax);           "\
+  253          " paddw         %%mm5,      %%mm4;           "\
+  254          " add              $8,      %%rax;           "\
+  255          " movq          %%mm7,      %%mm0;           "\
+  256          " psraw           $15,      %%mm0;           "\
+  257          " pand          %%mm4,      %%mm0;           "\
+  258          " movq          %%mm4,      %%mm2;           "\
+  259          " psraw           $15,      %%mm2;           "\
+  260          " pand          %%mm7,      %%mm2;           "\
+  261          " pmulhw        %%mm7,      %%mm4;           "\
+  262          " paddw         %%mm0,      %%mm4;           "\
+  263          " paddw         %%mm2,      %%mm4;           "\
+  264          " pxor          %%mm0,      %%mm0;           "\
+  265          " packuswb      %%mm0,      %%mm4;           "\
+  266          " movd          %%mm4,       (%1);           "\
+  267          " add              $4,         %1;           "\
+  268          " decl          %%edx;                       "\
+  269          " jne              4b;                       "\
+  270          " add              %8,         %1;           " /* dstpix += dstdiff */\
+  271          " addl             %5,      %%ecx;           "\
+  272          " subl        $0x4000,      %%ecx;           "\
+  273          "6:                                          " /* tail of outer Y-loop */\
+  274          " add              %7,         %0;           " /* srcpix += srcdiff */\
+  275          " decl             %3;                       "\
+  276          " jne              1b;                       "\
+  277          " emms;                                      "\
+  278          : "+r"(srcpix), "+r"(dstpix)    /* outputs */\
+  279          : "m"(templine),"m"(srcheight), "m"(width),     "m"(yspace),  \
+  280            "m"(yrecip),  "m"(srcdiff64), "m"(dstdiff64), "m"(One64)  /* input */\
+  281          : "%ecx","%edx","%rax"          /* clobbered */\
+  282          );\
+  283      /* free the temporary memory */\
+  284      free(templine);\
+  285  \}\
+  286  void\
+  287  filter_shrink_Y_SSE(Uint8 *srcpix, Uint8 *dstpix, int width, int srcpitch, int dstpitch, int srcheight, int dstheight)\
+  288  \{     Uint16 *templine;     int srcdiff = srcpitch - (width * 4);\
+  289      int dstdiff = dstpitch - (width * 4);\
+  290      int yspace = 0x4000 * srcheight / dstheight; /* must be > 1 */\
+  291      int yrecip = 0x40000000 / yspace;\
+  292      long long One64 = 0x4000400040004000ULL;\
+  293      /* allocate and clear a memory area for storing the accumulator line */\
+  294      templine = (Uint16 *) malloc(dstpitch * 2);\
+  295      if (templine == 0) return;\
+  296      memset(templine, 0, dstpitch * 2);\
+  297      long long srcdiff64 = srcdiff;\
+  298      long long dstdiff64 = dstdiff;\
+  299      asm __volatile__(" /* MMX code for Y-shrink area average filter */ "\
+  300          " movl             %5,      %%ecx;           " /* ecx == ycounter */\
+  301          " pxor          %%mm0,      %%mm0;           "\
+  302          " movd             %6,      %%mm7;           " /* mm7 == yrecipmmx */\
+  303          " pshufw    $0, %%mm7,      %%mm7;           "\
+  304          "1:                                          " /* outer Y-loop */\
+  305          " mov              %2,      %%rax;           " /* rax == accumulate */\
+  306          " cmpl        $0x4000,      %%ecx;           "\
+  307          " jbe              3f;                       "\
+  308          " movl             %4,      %%edx;           " /* edx == width */\
+  309          "2:                                          "\
+  310          " movd           (%0),      %%mm1;           "\
+  311          " add              $4,         %0;           "\
+  312          " movq        (%%rax),      %%mm2;           "\
+  313          " punpcklbw     %%mm0,      %%mm1;           "\
+  314          " paddw         %%mm1,      %%mm2;           "\
+  315          " movq          %%mm2,    (%%rax);           "\
+  316          " add              $8,      %%rax;           "\
+  317          " decl          %%edx;                       "\
+  318          " jne              2b;                       "\
+  319          " subl        $0x4000,      %%ecx;           "\
+  320          " jmp              6f;                       "\
+  321          "3:                                          " /* prepare to output a line */\
+  322          " movd          %%ecx,      %%mm1;           "\
+  323          " movl             %4,      %%edx;           " /* edx = width */\
+  324          " movq             %9,      %%mm6;           " /* mm6 = 2^14  */\
+  325          " pshufw    $0, %%mm1,      %%mm1;           "\
+  326          " psubw         %%mm1,      %%mm6;           " /* mm6 = yfrac */\
+  327          "4:                                          "\
+  328          " movd           (%0),      %%mm4;           " /* mm4 = srcpix */\
+  329          " add              $4,         %0;           "\
+  330          " punpcklbw     %%mm0,      %%mm4;           "\
+  331          " movq        (%%rax),      %%mm5;           " /* mm5 = accumulate */\
+  332          " movq          %%mm6,      %%mm3;           "\
+  333          " psllw            $2,      %%mm4;           "\
+  334          " pmulhuw       %%mm4,      %%mm3;           " /* mm3 = (srcpix * yfrac) >> 16 */\
+  335          " pmulhuw       %%mm1,      %%mm4;           " /* mm4 = (srcpix * ycounter >> 16) */\
+  336          " movq          %%mm3,    (%%rax);           "\
+  337          " paddw         %%mm5,      %%mm4;           "\
+  338          " add              $8,      %%rax;           "\
+  339          " pmulhuw       %%mm7,      %%mm4;           "\
+  340          " packuswb      %%mm0,      %%mm4;           "\
+  341          " movd          %%mm4,       (%1);           "\
+  342          " add              $4,         %1;           "\
+  343          " decl          %%edx;                       "\
+  344          " jne              4b;                       "\
+  345          " add              %8,         %1;           " /* dstpix += dstdiff */\
+  346          " addl             %5,      %%ecx;           "\
+  347          " subl        $0x4000,      %%ecx;           "\
+  348          "6:                                          " /* tail of outer Y-loop */\
+  349          " add              %7,         %0;           " /* srcpix += srcdiff */\
+  350          " decl             %3;                       "\
+  351          " jne              1b;                       "\
+  352          " emms;                                      "\
+  353          : "+r"(srcpix), "+r"(dstpix)    /* outputs */\
+  354          : "m"(templine),"m"(srcheight), "m"(width),     "m"(yspace),  \
+  355            "m"(yrecip),  "m"(srcdiff64), "m"(dstdiff64), "m"(One64)  /* input */\
+  356          : "%ecx","%edx","%rax"          /* clobbered */\
+  357          );\
+  358      /* free the temporary memory */\
+  359      free(templine);\
+  360  \}\
+  361  /* These functions implement a bilinear filter in the X-dimension.\
+  362   */\
+  363  void\
+  364  filter_expand_X_MMX(Uint8 *srcpix, Uint8 *dstpix, int height, int srcpitch, int dstpitch, int srcwidth, int dstwidth)\
+  365  \{     int *xidx0, *xmult0, *xmult1;     int x, y;     int factorwidth = 8;     /* Allocate memory for factors */;     xidx0 = malloc(dstwidth * 4);\
+  366      if (xidx0 == 0) return;\
+  367      xmult0 = (int *) malloc(dstwidth * factorwidth);\
+  368      xmult1 = (int *) malloc(dstwidth * factorwidth);\
+  369      if (xmult0 == 0 || xmult1 == 0);     \{         free(xidx0);\
+  370          if (xmult0) free(xmult0);\
+  371          if (xmult1) free(xmult1);\
+  372      \}\
+  373      /* Create multiplier factors and starting indices and put them in arrays */\
+  374      for (x = 0; x < dstwidth; x++)\
+  375      \{         int xm1 = 0x100 * ((x * (srcwidth - 1)) % dstwidth) / dstwidth;\
+  376          int xm0 = 0x100 - xm1;\
+  377          xidx0[x] = x * (srcwidth - 1) / dstwidth;\
+  378          xmult1[x*2]   = xm1 | (xm1 << 16);\
+  379  python swc-installation-test-1.py\
+  380  python swc-installation-test-1.py\
+  381  brew tap Homebrew/python\
+  382  brew install numpy --with-python3\
+  383  brew install numpy --with-python3\
+  384  brew install matplotlib --with-python3\
+  385  /Users/AparnaSingh pip install numpy\
+  386  easy_install pip\
+  387  pip install numpy\
+  388  sudo rm -rf /Library/Frameworks/Python.framework/Versions/2.7\
+  389  sudo rm -rf "/Applications/Python 2.7\
+  390  ls -l /usr/local/bin | grep '../Library/Frameworks/Python.framework/Versions/2.7\
+  391  cd /usr/local/bin/\
+  392  ls -l /usr/local/bin | grep '../Library/Frameworks/Python.framework/Versions/2.7' | awk '\{print $9\}' | tr -d @ | xargs rm\
+  393  easy_install pip\
+  394  pip3 install git+https://github.com/numpy/numpy.git\
+  395  pip install cython\
+  396  easy_install pip\
+  397  whoami\
+  398  pwd\
+  399  ls\
+  400  ls -F\
+  401  ls --help\
+  402  man ls\
+  403  ls -F Desktop\
+  404  ls Desktop/data\
+  405  cd Desktop\
+  406  cd data\
+  407  ls -F\
+  408  cd ..\
+  409  ls Desktop\
+  410  pwd\
+  411  ls -F -a\
+  412  cd data\
+  413  ls -Fa\
+  414  pwd\
+  415  ls/Users/AparnaSingh/Desktop\
+  416  ls /Users/AparnaSingh/Desktop/data\
+  417  pwd\
+  418  ls north-pacific-gyre/\
+  419  ls north-pacific-gyre/2012-07-03/\
+  420  ls -lh\
+  421  ls -R -t\
+  422  ls -R -t -l\
+  423  pwd\
+  424  mkdir thesis\
+  425  ls -F\
+  426  cd thesis/\
+  427  which nano\
+  428  vi draft.txt\
+  429  vi draft.txt\
+  430  ls\
+  431  cat draft.txt\
+  432  rm draft.txt\
+  433  vi draft.txt\
+  434  cd ..\
+  435  ls\
+  436  ls -F\
+  437  rm -r thesis/\
+  438  ls -F\
+  439  mkdir thesis\
+  440  vi thesis/draft.txt\
+  441  ls thesis\
+  442  mv thesis/draft.txt thesis/quotes.txt\
+  443  ls thesis\
+  444  pwd\
+  445  mv thesis/quotes.txt.\
+  446  mv thesis/quotes.txt .\
+  447  ls thesis\
+  448  ls\
+  449  cp quotes.txt thesis/quotations.txt\
+  450  ls thesis\
+  451  rm quotes.txt\
+  452  ls\
+  453  cd\
+  454  touch my_file.txt\
+  455  ls\
+  456  ls -l my_file.txt\
+  457  rm my_file.txt\
+  458  ls\
+  459  cd Desktop/data/\
+  460  rm -i thesis/quotations.txt\
+  461  pwd\
+  462  ls molecules/\
+  463  cd molecules\
+  464  wc *.pdb\
+  465  wc *.p??\
+  466  wc -l *.pdb\
+  467  wc -l *.pdb > lengths.txt\
+  468  ls\
+  469  cat lengths.txt \
+  470  sort -n lengths.txt\
+  471  sort -n lengths.txt > sorted-lengths.txt\
+  472  ls\
+  473  cat sorted-lengths.txt\
+  474  head -n 1 sorted-lengths.txt \
+  475  tail -n 1 sorted-lengths.txt \
+  476  tail -n 3 sorted-lengths.txt \
+  477  sort -n lengths.txt | head -n 1\
+  478  cd..\
+  479  cd nortth-pacific-gyre/2012-07-03/\
+  480  cd ..\
+  481  cd north-pacific-gyre/2012-07-03/\
+  482  wc -l *.txt\
+  483  wc -l *.txt| sort -n | head -n 5\
+  484  wc -l *.txt| sort -n | tail -n 5\
+  485  ls *Z.txt\
+  486  ls *[AB].txt\
+  487  python --version\
+  488  cd Desktop/python-novice-inflammation/data\
+  489  cd \
+  490  pwd\
+  491  cd\
+  492  cd Desktop/python-novice-inflammation/data\
+  493  pwd\
+  494  jupyter notebook\
+  495  notebook jupyter\
+  496  jupyter notebook\
+  497  /Users/AparnaSingh/anaconda/bin/jupyter_mac.command ; exit;\
+  498  jupyter notebook\
+  499  pwd\
+  500  ls\
+  501  git config --global user.name "Aparna Singh"\
+  502  git config --global user.email "aparna.singh@northwestern.edu"\
+  503  git config --global color.ui "auto"\
+  504  git config --global core.editor "vi"\
+  505  git config --list\
+  506  mkdir planets\
+  507  cd planets\
+  508  git init\
+  509  ls -al\
+  510  git status\
+  511  vi mars.txt\
+  512  cat mars.txt\
+  513  git status\
+  514  git add mars.txt\
+  515  git status\
+  516  git commit -m "Starting notes on Mars as a base"\
+  517  git status\
+  518  git log \
+  519  vi mars.txt\
+  520  cat mars.txt\
+  521  git status\
+  522  git diff\
+  523  git commit -m "Add nots about colony"\
+  524  git add mars.txt\
+  525  git status\
+  526  git commit -m "Add notes about colony"\
+  527  git status\
+  528  git log\
+  529  vi "venus.txt"\
+  530  git add venus.txt\
+  531  git commit -m "considering Venus"\
+  532  git status\
+  533  vi "mars.txt"\
+  534  cat mars.txt\
+  535  git diff\
+  536  git add mars.txt\
+  537  git status\
+  538  git diff\
+  539  git diff --staged\
+  540  git diff HEAD\
+  541  vi venus.txt\
+  542  git status\
+  543  git diff\
+  544  git diff --staged\
+  545  git diff HEAD\
+  546  vi mars.txt\
+  547  git diff --staged\
+  548  add mars.txt\
+  549  git add mars.txt\
+  550  git add venus.txt\
+  551  git commit -m "Additional notes"\
+  552  git log\
+  553  vi mars.txt\
+  554  git diff HEAD\
+  555  git diff HEAD~1\
+  556  git log --stat\
+  557  cat mars.txt\
+  558  git diff HEAD~1\
+  559  git status\
+  560  git diff HEAD~1\
+  561  git log --oneline\
+  562  git diff ad4790d\
+  563  git add mars.txt\
+  564  git status\
+  565  git commit -m"Removed error comment"\
+  566  git status\
+  567  vi mars.txt\
+  568  cat mars.txt\
+  569  git diff\
+  570  git status\
+  571  git checkout HEAD mars.txt\
+  572  cat mars.txt\
+  573  git log --oneline\
+  574  cat mars.txt\
+  575  git revert HEAD\
+  576  git log --oneline\
+  577  cat mars.txt\
+  578  git show 1227866 mars.txt\
+  579  cat mars.txt\
+  580  cat venus.txt\
+  581  git checkout master\
+  582  vi mars.txt\
+  583  git status\
+  584  rm mars.txt\
+  585  cat mars.txt\
+  586  git status\
+  587  git checkout HEAD mars.txt\
+  588  cat mars.txt\
+  589  git status\
+  590  ls\
+  591  mkdir results\
+  592  ls\
+  593  ls -F\
+  594  touch a.dat b.dat c.dat results/ad.out results/b.out \
+  595  ls -F\
+  596  git status\
+  597  vi .gitignore\
+  598  cat .gitignore\
+  599  gitstatus\
+  600  git status\
+  601  ls\
+  602  git add .gitignore\
+  603  git status\
+  604  git commit -m "Added gitignore"\
+  605  git status]\
+  606  git status\
+  607  ls\
+  608  git add a.dat\
+  609  -f a.dat\
+  610  vi .gitignore\
+  611  cat .gitignore\
+  612  git status\
+  613  git add .gitignore\
+  614  git status\
+  615  git ls-files\
+  616  git remote add origin https://github.com/aparnasingh92/planets.git\
+  617  git config -l\
+  618  git status\
+  619  git commit .gitignore\
+  620  git commit .gitignore\
+  621  git status\
+  622  git push origin master\
+  623  git push --help\
+  624  cd\
+  625  cd Desktop\
+  626  git clone https://github.com/jonizc/planets.git buddy_planets\
+  627  ls\
+  628  cd buddy_planets\
+  629  ls\
+  630  ls -a\
+  631  ls -l\
+  632  vi pluto.txt\
+  633  cat pluto.txt\
+  634  git status\
+  635  git add pluto.txt\
+  636  git commit -m "adding a new planet"\
+  637  git push origin master \
+  638  cd\
+  639  ls\
+  640  cd planets\
+  641  ls\
+  642  git pull origin\
+  643  git pull origin master\
+  644  git status\
+  645  git log\
+  646  git diff HEAD HEAD~1\
+  647  git diff HEAD~1 HEAD\
+  648  vi mars.txt\
+  649  cat mars.txt\
+  650  git status\
+  651  git add mars.txt\
+  652  git commit -m "Aparna edits here"\
+  653  git push origin master\
+  654  cd\
+  655  cd Deskptop\
+  656  cd Desktop\
+  657  ls\
+  658  cd buddy_planets\
+  659  vi mars.txt\
+  660  git add mars.txt\
+  661  git commit -m "Aparna made some editing to it"\
+  662  git pull origin master\
+  663  vi mars.txt\
+  664  git status\
+  665  git add mars.txt\
+  666  git commit -m "now it should work"\
+  667  git push orgin master\
+  668  git push origin master\
+  669  history\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ history >transcript_git\
+dhcp-10-102-147-96:buddy_planets AparnaSingh$ \
+}
